@@ -19,10 +19,17 @@ const noteJuly16 = {
     id: 3,
     subject: "Javascript Arrays, Objects, Arrays of objects and Array methods",
     date: "July 16th",
-    feeling: "This is reminiscent of the pre-work, so I don't feel too overwhelmed, but it is still challenging",
+    feeling: "challenged",
     timeSpent: 6
 }
 
 dailyNotes.push(noteJuly16);
 
-console.log(dailyNotes);
+for (const dailyNote of dailyNotes) {
+    console.log(`
+    Note ${dailyNote.id}
+    ${dailyNote.date}
+    I learned ${dailyNote.subject}.
+    I spent ${dailyNote.timeSpent} hours working on it.
+    I felt ${dailyNote.feeling}.`) 
+}
