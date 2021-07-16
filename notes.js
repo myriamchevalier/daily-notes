@@ -9,10 +9,20 @@ const dailyNotes = [
     {
         id: 2,
         subject: "GitHub Workflow (team",
-        date: "July 13th and July 14th",
+        date: "July 13th to July 15th",
         feeling: "A little overwhelmed with new information. Much better the next day after my brain processed.",
-        timeSpent: 9
+        timeSpent: 15
     }
 ]
+
+const noteJuly16 = {
+    id: 3,
+    subject: "Javascript Arrays, Objects, Arrays of objects and Array methods",
+    date: "July 16th",
+    feeling: "This is reminiscent of the pre-work, so I don't feel too overwhelmed, but it is still challenging",
+    timeSpent: 6
+}
+
+dailyNotes.push(noteJuly16);
 
 console.log(dailyNotes);
