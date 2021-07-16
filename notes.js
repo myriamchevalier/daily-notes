@@ -25,11 +25,25 @@ const noteJuly16 = {
 
 dailyNotes.push(noteJuly16);
 
-for (const dailyNote of dailyNotes) {
+//to display notes in order manner
+/*for (const dailyNote of dailyNotes) {
     console.log(`
     Note ${dailyNote.id}
     ${dailyNote.date}
     I learned ${dailyNote.subject}.
     I spent ${dailyNote.timeSpent} hours working on it.
     I felt ${dailyNote.feeling}.`) 
+}*/
+
+//searching for a specific term in array and displaying only the object(s) with that term
+
+const searchTerm = "challenged"
+
+for (const dailyNote of dailyNotes) {
+    
+    if (searchTerm === dailyNote.feeling) {
+        console.log(dailyNote)
+    }
+    
 }
+
