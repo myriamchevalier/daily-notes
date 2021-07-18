@@ -20,12 +20,37 @@ const noteJuly16 = {
     subject: "Javascript Arrays, Objects, Arrays of objects and Array methods",
     date: "July 16th",
     feeling: "challenged",
-    timeSpent: 6
+    timeSpent: 6,
 }
 
 dailyNotes.push(noteJuly16);
 
-//to display notes in order manner
+// create function that pushes a new note into the array, and also attributes it an id
+const createNote = (note) => {
+    // find last index (lenght of the array minus one = index, because index starts at 0)
+    const lastIndex = dailyNotes.length - 1
+    // find current last note (what index is the last note at, so we can later find the id)
+    const currentNote = dailyNotes[lastIndex]
+    // determine id of currentNote (which is the maxId, because it's the last one in the array)
+    const maxId = currentNote.id
+    note.id = maxId + 1
+
+    dailyNotes.push(note)
+}
+
+const noteJuly17 = {
+    subject: "More JS",
+    date: "July 17th",
+    feeling: "tired",
+    timeSpent: 1,
+    dateCreated: Date()
+}
+
+createNote(noteJuly17);
+
+console.log(dailyNotes);
+
+//to display notes in orderly manner
 /*for (const dailyNote of dailyNotes) {
     console.log(`
     Note ${dailyNote.id}
@@ -35,15 +60,15 @@ dailyNotes.push(noteJuly16);
     I felt ${dailyNote.feeling}.`) 
 }*/
 
-//searching for a specific term in array and displaying only the object(s) with that term
+//searching for a specific term in array and displaying only the object with that term
 
-const searchTerm = "challenged"
+// const searchTerm = "challenged"
 
-for (const dailyNote of dailyNotes) {
+// for (const dailyNote of dailyNotes) {
     
-    if (searchTerm === dailyNote.feeling) {
-        console.log(dailyNote)
-    }
-    
-}
+//     if (searchTerm === dailyNote.feeling) {
+//         console.log(dailyNote)
+//     }
+
+// }
 
